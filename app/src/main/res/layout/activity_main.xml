@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jarek.thebodymonitor.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewMental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/text_mental"
+        app:srcCompat="@mipmap/imagebrain" />
+
+    <ImageView
+        android:id="@+id/imageViewBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageViewMental"
+        android:layout_below="@+id/imageViewMental"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/text_body"
+        app:srcCompat="@mipmap/imagebody" />
+
+    <ImageView
+        android:id="@+id/imageViewWillingness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageViewBody"
+        android:layout_below="@+id/imageViewBody"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/text_willingess"
+        app:srcCompat="@mipmap/imageheci" />
+
+    <SeekBar
+        android:id="@+id/seekBarMental"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageViewMental"
+        android:layout_below="@+id/imageViewMental"
+        android:max="10"
+        android:progress="5"
+        android:layout_marginRight="20sp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarBody"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageViewBody"
+        android:layout_below="@+id/imageViewBody"
+        android:max="10"
+        android:progress="5"
+        android:layout_marginRight="20sp" />
+
+    <SeekBar
+        android:id="@+id/seekBarWillingness"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageViewWillingness"
+        android:layout_below="@+id/imageViewWillingness"
+        android:max="10"
+        android:progress="5"
+        android:layout_marginRight="20sp" />
+
+    <TextView
+        android:id="@+id/textViewMental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarMental"
+        android:layout_toEndOf="@+id/imageViewMental"
+        android:text="@string/text_mental"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageViewWillingness"
+        android:layout_toEndOf="@+id/imageViewBody"
+        android:text="@string/text_body"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewWillingness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarWillingness"
+        android:layout_toEndOf="@+id/imageViewWillingness"
+        android:text="@string/text_willingess"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/buttonEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClickEnd"
+        android:text="@string/text_end" />
+
+    <TextView
+        android:id="@+id/textViewNumberOfResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="10sp"
+        android:text="@string/text_number_of_results"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonAddStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonEnd"
+        android:layout_alignStart="@+id/buttonEnd"
+        android:onClick="onClickAdd"
+        android:text="@string/text_add" />
+
+
+</RelativeLayout>

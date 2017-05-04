@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Personal Info</string>
+    <string name="text_mental">Umysł</string>
+    <string name="text_body">Ciało</string>
+    <string name="text_willingess">Chęci</string>
+    <string name="text_add">Dodaj</string>
+    <string name="text_end">Koniec</string>
+    <string name="text_number_of_results">Liczba pomiarów:</string>
+    <string name="text_operation_prefix">Zapis przebiegł </string>
+    <string name="text_succeed">prawidłowo.</string>
+    <string name="text_failed">nieprawidłowo.</string>
+</resources>
